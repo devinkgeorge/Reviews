@@ -1,10 +1,10 @@
-# Project Name
+# Amishon Reviews module
 
-> Project description
+> The Amishon reviews module displays the reviews for an item on Amishon.  It allows users to view feedback from other users on the item, submit their own review, and provides relevant data for each review such as date created, number of stars, number of users who found the review helpful, and more.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
+  - https://github.com/Amishon
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
