@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "amishon-reviews",
   "version": "",
   "description": "",
   "author": "",
@@ -9,8 +9,12 @@
   },
   "scripts": {
     "dev-server": "nodemon server/server.js",
-    "build-dev": "webpack -d --watch"
+    "build-dev": "webpack -d --watch",
+    "test": "jest"
   },
+  "pre-commit": [
+
+  ],
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
@@ -20,6 +24,7 @@
     "mongoose": "^5.7.4",
     "popper": "^1.0.1",
     "popper.js": "^1.15.0",
+    "pre-commit": "^1.2.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },
@@ -30,7 +35,19 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
