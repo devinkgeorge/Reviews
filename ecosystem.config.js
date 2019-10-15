@@ -12,7 +12,7 @@ module.exports = {
       key: '~/.ssh/Amishon.pem',
       ref: 'origin/master',
       repo: 'git@github.com:Amishon/Reviews.git',
-      path: '/home/ubuntu/Reviews',
+      path: '/home/ubuntu',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
