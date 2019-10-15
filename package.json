@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "amishon-reviews",
   "version": "",
   "description": "",
   "author": "",
@@ -8,10 +8,50 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
+    "dev-server": "nodemon server/server.js",
+    "build-dev": "webpack -d --watch",
+    "test": "jest"
   },
+  "pre-commit": [],
   "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.7.4",
+    "nodejs-latest": "^1.1.0",
+    "popper": "^1.0.1",
+    "popper.js": "^1.15.0",
+    "pre-commit": "^1.2.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^24.9.0",
+    "pm2": "^4.1.2",
+    "prettier": "^1.18.2",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   }
 }
