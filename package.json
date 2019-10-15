@@ -12,9 +12,7 @@
     "build-dev": "webpack -d --watch",
     "test": "jest"
   },
-  "pre-commit": [
-
-  ],
+  "pre-commit": [],
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
@@ -22,6 +20,7 @@
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "mongoose": "^5.7.4",
+    "nodejs-latest": "^1.1.0",
     "popper": "^1.0.1",
     "popper.js": "^1.15.0",
     "pre-commit": "^1.2.2",
