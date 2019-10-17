@@ -3,6 +3,7 @@ import User from './user.js';
 import ReviewTitle from './reviewTitle.js';
 import DateStamp from './dateStamp.js';
 import ItemInfo from './itemInfo.js';
+import ReviewText from './reviewText.js';
 
 const Review = props => {
   return (
@@ -16,6 +17,7 @@ const Review = props => {
         color={props.review.color}
         verified={props.review.verified}
       />
+      <ReviewText body={props.review.body} />
     </div>
   )
 }
