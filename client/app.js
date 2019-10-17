@@ -17,8 +17,23 @@ class Reviews extends React.Component {
           body: 'Radish on kidney beans',
           verified: true,
           stars: 5,
-          style: '',
+          size: 'M',
+          style: 'Some style',
           helpfuls: 13
+        },
+        {
+          review_id: 14,
+          product_id: 16,
+          created: 20040403,
+          title: 'Forage Harvester',
+          user_id: 17,
+          body:
+            'Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Ewes fox, hay hook hay manure, John Deere radish barn, a hay lof.',
+          verified: false,
+          stars: 2,
+          color: 'black',
+          style: 'Other style',
+          helpfuls: 0
         }
       ]
     }
