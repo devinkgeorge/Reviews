@@ -4,6 +4,7 @@ import ReviewTitle from './reviewTitle.js';
 import DateStamp from './dateStamp.js';
 import ItemInfo from './itemInfo.js';
 import ReviewText from './reviewText.js';
+import Helpful from './helpful.js';
 
 const Review = props => {
   return (
@@ -18,6 +19,7 @@ const Review = props => {
         verified={props.review.verified}
       />
       <ReviewText body={props.review.body} />
+      <Helpful helpfuls={props.review.helpfuls} />
     </div>
   )
 }
