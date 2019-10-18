@@ -8,11 +8,8 @@ import Helpful from './helpful.js';
 
 const Review = props => {
   return (
-    <div>
-      <User
-        className="reviewer-container"
-        user={props.review.user}
-      />
+    <div className="review-container">
+      <User user={props.review.user} />
       <ReviewTitle
         rating={props.review.stars}
         title={props.review.title}
