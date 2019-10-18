@@ -4,11 +4,55 @@ import Review from './review.js'
 const ReviewList = (props) => {
   return (
     <div>
-      <h3 className="number-reviews-header">{props.currentProductReviews.length} Amish reviews</h3>
+      <h3 className="number-reviews-header">
+        {props.currentProductReviews.length} Amish reviews
+      </h3>
       <div className="reviews-sorter-container">
-        <span className="reviews-sorter">Top Reviews</span>
+        <span data-action="reviews:filter-action:change">
+          <span className="reviews-dropdown-container">
+            <select
+              name=""
+              autoComplete="off"
+              tabIndex="0"
+              className="reviews-dropdown"
+              aria-pressed="false"
+            >
+              <option
+                value="helpful"
+                className="reviews-sort-order-option"
+              >
+                Top Reviews
+              </option>
+              <option
+                value="recent"
+                className="reviews-sort-order-option"
+              >
+                Most recent
+              </option>
+            </select>
+            <span
+              tabIndex="-1"
+              className="reviews-dropdown-button"
+              aria-hidden="true"
+            >
+              <span className="review-button-inner">
+                <span
+                  className="review-button-text"
+                  data-action="a-dropdown-button"
+                  role="button"
+                  aria-hidden="true"
+                >
+                  <span className="review-dropdown-prompt">
+                    Top Reviews
+                  </span>
+                </span>
+                <i className="reviews-dropdown-icon"></i>
+              </span>
+            </span>
+          </span>
+        </span>
       </div>
-      <div>
+      <div className="review-list-container">
         {
           props.currentProductReviews.map( currentReview => {
             return (
