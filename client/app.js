@@ -36,7 +36,7 @@ class Reviews extends React.Component {
             userimg: 'https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png'
           },
           body:
-            'Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Ewes fox, hay hook hay manure, John Deere radish barn, a hay lof.',
+            'Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Ewes fox, hay hook hay manure, John Deere radish barn, a hay lof.Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Ewes fox, hay hook hay manure, John Deere radish barn, a hay lof.Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Ewes fox, hay hook hay manure, John Deere radish barn, a hay lof.Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Ewes fox, hay hook hay manure, John Deere radish barn, a hay lof.',
           verified: false,
           stars: 2,
           color: 'black',
