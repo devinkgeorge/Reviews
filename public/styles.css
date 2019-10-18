@@ -49,6 +49,22 @@ table {
 }
 /* End CSS Reset */
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  line-height: 19px;
+  color: #111;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  background: #fff;
+  min-height: 100%;
+  display: block;
+  margin: 8px;
+}
 
 .number-reviews-header {
   font-weight: 700;
@@ -62,7 +78,123 @@ table {
   margin-bottom: 10px!important;
 }
 
-.reviews-sorter {
+.reviews-dropdown-container {
+  position: relative;
+}
+
+.reviews-dropdown {
+  position: absolute;
+  z-index: -1;
+  opacity: .01;
+  max-width: 100%;
+  left: 0;
+  border-radius: 4px;
+  padding: 3px;
+  border: 1px #ddd solid;
+  transition: all .1s linear;
+  line-height: 19px;
+  color: #111;
+  font-family: inherit;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: menulist;
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  background-color: rgb(248, 248, 248);
+  cursor: default;
+  font: 400 11px system-ui;
+}
+
+.reviews-sort-order-option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+  line-height: 19px;
+}
+
+.reviews-dropdown-button {
+  min-width: 0%;
+  height: 22px;
+  width: 135px;
+  background: #e7e9ec;
+  border-radius: 3px;
+  border-color: #ADB1B8 #A2A6AC #8D9096;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none!important;
+  vertical-align: middle;
+}
+
+.review-button-inner {
+  height: 20px!important;
+  background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.review-button-text {
+  padding-right: 20px;
+  /* font-size: 11px; */
+  height: 20px;
+  line-height: 20px;
+  padding: 0 6px 0 7px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  border: 0;
+  display: block;
+  white-space: nowrap;
+  margin: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.review-dropdown-prompt {
+  line-height: 20px;
+  /* font-size: 11px; */
+  text-align: left;
+}
+
+.reviews-dropdown-icon {
+  right: 5px;
+  top: 6px;
+  position: absolute;
+  width: 10px;
+  height: 8px;
+  background-position: -7px -102px;
+  background-size: 400px 900px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIIcon@spritePackerImages-sprite_1x-003a05344e6a5263c945684c66748394b4cbb9a2._V2_.png);
+}
+
+/* .reviews-sorter {
   height: 20px!important;
   background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
   position: relative;
@@ -83,21 +215,4 @@ table {
 
 .reviewer-name {
 
-}
-
-body {
-  font-size: 13px;
-  line-height: 19px;
-  color: #111;
-  font-family: "Amazon Ember",Arial,sans-serif;
-  background: #fff;
-  min-height: 100%;
-  display: block;
-  margin: 8px;
-}
-
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+} */
