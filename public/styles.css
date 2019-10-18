@@ -194,25 +194,47 @@ body {
   background-image: url(https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIIcon@spritePackerImages-sprite_1x-003a05344e6a5263c945684c66748394b4cbb9a2._V2_.png);
 }
 
-/* .reviews-sorter {
-  height: 20px!important;
-  background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+.review-list-container {
+  width: 100%;
+  min-height: 100px;
+  word-wrap: break-word;
+  margin-bottom: 26px!important;
+}
+
+.review-container {
+  max-width: 80em;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
-  border-radius: 2px;
-  cursor: pointer;
-  text-align: center;
+  margin-bottom: 22px;
 }
 
 .reviewer-container {
-
+  margin-bottom: 6px!important;
+  display: table;
+  cursor: pointer;
 }
 
-.user-thumbnail {
+.reviewer-thumbnail-wrapper {
+  padding-right: 9px;
+  width: 43px;
+  display: table-cell;
+}
 
+.reviewer-thumbnail {
+  height: 34px;
+  width: 34px;
+  vertical-align: top;
+}
+
+.reviewer-name-wrapper {
+  min-height: 34px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .reviewer-name {
-
-} */
+  font-size: 13px;
+  line-height: 19px;
+  unicode-bidi: isolate;
+  position: relative;
+  color: #111;
+}
