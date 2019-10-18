@@ -5,7 +5,7 @@ const reviewsSchema = new mongoose.Schema({
   product_id: Number,
   created: { type: Date, default: Date.now },
   title: String,
-  user_id: Number,
+  user: { user_id: Number, username: String, userimg: String },
   body: String,
   verified: Boolean,
   stars: Number,

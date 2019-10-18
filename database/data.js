@@ -7,12 +7,21 @@ function randomDate(start, end, startHour, endHour) {
   return date;
 }
 
+const names = ['John', 'Aaron', 'Ezekiel', 'Amos', 'Levi', 'Jebediah', 'Jacob', 'David', 'Daniel', 'Isaiah', 'Eli', 'Noah', 'Samuel', 'Moses', 'Mary', 'Sarah', 'Rebecca', 'Anna', 'Susanna', 'Hannah', 'Susan', 'Elizabeth', 'Rachel'];
+
+const initials = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
 var seederFunc = () => {
   for(var i = 0; i < data.length; i++) {
     data[i].review_id = i + 1;
+    data[i].user = {
+      user_id: i + 1,
+      username: names[getRandomInt(0, names.length)] + ' ' + initials[getRandomInt(0, 26)],
+      userimg: 'https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png'
+    };
     data[i].product_id = getRandomInt(1, 101);
     data[i].created = randomDate(1071265179893, 1571265179893);
-    data[i].user_id = i + 1;
+    delete data[i].user_id;
     data[i].stars = getRandomInt(1, 6);
     data[i].helpfuls = getRandomInt(1, 50);
     if(i % 5 === 0) {
