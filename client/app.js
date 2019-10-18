@@ -13,7 +13,11 @@ class Reviews extends React.Component {
           product_id: 13,
           created: 20131313,
           title: 'Manure',
-          user_id: 13,
+          user: {
+            user_id: 13,
+            username: 'Rachel P',
+            userimg: 'https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png'
+          },
           body: 'Radish on kidney beans',
           verified: true,
           stars: 5,
@@ -26,7 +30,11 @@ class Reviews extends React.Component {
           product_id: 16,
           created: 20040403,
           title: 'Forage Harvester',
-          user_id: 17,
+          user: {
+            user_id: 14,
+            username: 'Buddy J',
+            userimg: 'https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png'
+          },
           body:
             'Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Ewes fox, hay hook hay manure, John Deere radish barn, a hay lof.',
           verified: false,

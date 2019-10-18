@@ -9,8 +9,14 @@ import Helpful from './helpful.js';
 const Review = props => {
   return (
     <div>
-      <User user={props.review.user_id} />
-      <ReviewTitle rating={props.review.stars} title={props.review.title} />
+      <User
+        className="reviewer-container"
+        user={props.review.user}
+      />
+      <ReviewTitle
+        rating={props.review.stars}
+        title={props.review.title}
+      />
       <DateStamp date={props.review.created} />
       <ItemInfo
         style={props.review.style}

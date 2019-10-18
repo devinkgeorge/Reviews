@@ -4,8 +4,10 @@ import Review from './review.js'
 const ReviewList = (props) => {
   return (
     <div>
-      <h5 className="number-reviews-header">{props.currentProductReviews.length} Amish reviews</h5>
-      <div>This is where the dropdown to sort reviews will be</div>
+      <h3 className="number-reviews-header">{props.currentProductReviews.length} Amish reviews</h3>
+      <div className="reviews-sorter-container">
+        <span className="reviews-sorter">Top Reviews</span>
+      </div>
       <div>
         {
           props.currentProductReviews.map( currentReview => {
