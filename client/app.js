@@ -11,7 +11,8 @@ class Reviews extends React.Component {
         {
           review_id: 13,
           product_id: 13,
-          created: 20131313,
+          created:
+          2004-07-06T12:14:09.334+00:00,
           title: 'Manure',
           user: {
             user_id: 13,

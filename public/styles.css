@@ -284,3 +284,7 @@ body {
   font-size: 14px!important;
   line-height: 19px!important;
 }
+
+.review-date-stamp {
+  color: #555!important;
+}
