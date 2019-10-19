@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Review = require('./models/reviews');
 const reviews = require('./data.js');
-// const moment = require('moment');
+const moment = require('moment');
 
 // Get the default connection
 const db = mongoose.connection;
@@ -27,12 +27,12 @@ const getReviews = callback => {
   });
 };
 
-Review.insertMany(reviews, err => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('successfully seeded');
-  }
-});
+// Review.insertMany(reviews, err => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('successfully seeded');
+//   }
+// });
 
 module.exports = getReviews;
