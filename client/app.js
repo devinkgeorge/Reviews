@@ -40,7 +40,7 @@ class Reviews extends React.Component {
           verified: false,
           stars: 2,
           color: 'black',
-          style: 'Other style',
+          size: 'XXL',
           helpfuls: 0
         }
       ]

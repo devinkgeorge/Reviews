@@ -288,3 +288,28 @@ body {
 .review-date-stamp {
   color: #555!important;
 }
+
+.review-info-bar {
+  margin-bottom: 6px!important;
+}
+
+.review-text-separator {
+  display: inline-block;
+  margin: -2px .67375em 0;
+  width: 1px;
+  background-color: #ddd;
+  line-height: 0;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.review-info{
+  color: #555!important;
+}
+
+.review-info-verified {
+  font-weight: 700!important;
+  font-size: 11px!important;
+  line-height: 1.465!important;
+  color: #c45500!important;
+}
