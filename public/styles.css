@@ -313,3 +313,10 @@ body {
   line-height: 1.465!important;
   color: #c45500!important;
 }
+
+.review-text {
+  margin-bottom: 10px!important;
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
