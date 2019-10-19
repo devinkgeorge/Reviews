@@ -60,13 +60,19 @@ const ReviewList = (props) => {
             )
           })
         }
+        <div>
+          <div className="see-all-reviews-container">
+            <a href="URLforAllReviewsPage" className="see-all-reviews-link">
+              See all {props.currentProductReviews.length} Amish reviews
+            </a>
+          </div>
+          <div>
+            <button className="review-button">
+              Write an Amish review
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="see-all-reviews-div">
-        <a href="URLforAllReviewsPage" className="see-all-reviews">
-          See all {props.currentProductReviews.length} Amish reviews
-        </a>
-      </div>
-      <button className="write-review-button">Write an Amish review</button>
     </div>
   )
 }
