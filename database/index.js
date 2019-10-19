@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Review = require('./models/reviews');
-// const reviews = require('./data.js');
+const reviews = require('./data.js');
+const moment = require('moment');
 
 // Get the default connection
 const db = mongoose.connection;

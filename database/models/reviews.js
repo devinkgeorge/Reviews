@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const reviewsSchema = new mongoose.Schema({
   review_id: { type: Number, unique: true },
   product_id: Number,
-  created: { type: Date, default: Date.now },
+  created: String,
   title: String,
-  user_id: Number,
+  user: { user_id: Number, username: String, userimg: String },
   body: String,
   verified: Boolean,
   stars: Number,
