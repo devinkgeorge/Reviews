@@ -332,7 +332,7 @@ body {
   float: left!important;
 }
 
-.helpful-button {
+.helpful-button-outer {
   background: #e7e9ec;
   border-radius: 3px;
   border-color: #ADB1B8 #A2A6AC #8D9096;
@@ -356,4 +356,41 @@ body {
   height: 29px;
   box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
   border-radius: 2px;
+}
+
+.helpful-button {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  font-size: 13px;
+  line-height: 29px;
+  margin: 0;
+  outline: 0;
+  padding: 0 10px 0 11px;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+.helpful-button-text {
+  width: 77px;
+  font-size: 13px;
+  line-height: 29px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.review-footer-link {
+  font-weight: 400!important;
+  font-style: normal!important;
+  text-transform: none!important;
+  text-decoration: none!important;
+  font-size: 13px!important;
+  line-height: 19px!important;
+  color: #555!important;
+}
+
+.review-footer {
+  line-height: 30px;
 }

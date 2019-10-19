@@ -9,14 +9,26 @@ const Helpful = props => {
         </div>
       }
       <div className="helpful-button-container">
-        <span className="helpful-button">
+        <span className="helpful-button-outer">
           <span className="helpful-button-inner">
-            Helpful
+            <button className="helpful-button">
+              <div className="helpful-button-text">
+                Helpful
+              </div>
+            </button>
           </span>
         </span>
       </div>
-      <a href="commentsPageUrl" className="review-comment-link">Comment</a>
-      <a href="reportAbusePageUrl" className="report-abuse-link">Report abuse</a>
+      <i className="review-text-separator"></i>
+      <a href="commentsPageUrl" className="review-footer-link">Comment</a>
+      <span className="review-footer">
+        <i className="review-text-separator"></i>
+        <span>
+          <a href="reportAbusePageUrl" className="review-footer-link">
+            Report abuse
+          </a>
+        </span>
+      </span>
     </div>
   )
 }
