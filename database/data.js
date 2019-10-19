@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min)) + Math.ceil(min));
 }
@@ -20,7 +22,7 @@ var seederFunc = () => {
       userimg: 'https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png'
     };
     data[i].product_id = getRandomInt(1, 101);
-    data[i].created = randomDate(1071265179893, 1571265179893);
+    data[i].created = moment(randomDate(1071265179893, 1571265179893)).format('LL');
     delete data[i].user_id;
     data[i].stars = getRandomInt(1, 6);
     data[i].helpfuls = getRandomInt(1, 50);
