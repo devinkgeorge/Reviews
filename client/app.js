@@ -11,8 +11,7 @@ class Reviews extends React.Component {
         {
           review_id: 13,
           product_id: 13,
-          created:
-          2004-07-06T12:14:09.334+00:00,
+          created: "December 6, 2016",
           title: 'Manure',
           user: {
             user_id: 13,
@@ -29,7 +28,7 @@ class Reviews extends React.Component {
         {
           review_id: 14,
           product_id: 16,
-          created: 20040403,
+          created: "September 12, 2009",
           title: 'Forage Harvester',
           user: {
             user_id: 14,
