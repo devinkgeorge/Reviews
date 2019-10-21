@@ -19,9 +19,13 @@ mongoose.connect(mongoAtlas, { useNewUrlParser: true });
 
 const getReviews = product => {
   return new Promise((resolve, reject) => {
-    Review.find({ product_id: product }).then(reviewsForProduct => {
-      resolve(reviewsForProduct);
-    });
+    Review.find({ product_id: product })
+      .then(reviewsForProduct => {
+        resolve(reviewsForProduct);
+      })
+      .catch(error => {
+        reject(error);
+      });
   });
 };
 
