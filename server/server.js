@@ -2,6 +2,7 @@
 const express = require('express');
 // const http = require('http');
 const path = require('path');
+const db = require('../database/index.js');
 
 // Instantation
 const app = express();
@@ -14,7 +15,13 @@ app.use(express.static(path.join(__dirname, '/../public')));
 
 // Routes
 app.get('/reviews', (req, res) => {
-  res.send('Blank reviews GET request working');
+  db.getReviews(req.query.product_id)
+    .then(reviewsForProduct => {
+      res.send(reviewsForProduct);
+    })
+    .catch(err => {
+      res.send(err);
+    });
 });
 
 app.post('/reviews', (req, res) => {

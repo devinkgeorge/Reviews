@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Review = require('./models/reviews');
-const reviews = require('./data.js');
-const moment = require('moment');
+// const moment = require('moment');
+// const reviews = require('./data.js');
 
 // Get the default connection
 const db = mongoose.connection;
@@ -17,9 +17,11 @@ const mongoAtlas =
   'mongodb+srv://dkgeorge:AE2PX9NAABSEJ6JU@amishon-reviews-ajtnd.mongodb.net/Amishon?retryWrites=true&w=majority';
 mongoose.connect(mongoAtlas, { useNewUrlParser: true });
 
-const getReviews = (product, callback) => {
-  Review.find({ product_id: product }).then(doc => {
-    callback(doc);
+const getReviews = product => {
+  return new Promise((resolve, reject) => {
+    Review.find({ product_id: product }).then(reviewsForProduct => {
+      resolve(reviewsForProduct);
+    });
   });
 };
 
@@ -31,4 +33,4 @@ const getReviews = (product, callback) => {
 //   }
 // });
 
-module.exports = getReviews;
+module.exports = { getReviews };

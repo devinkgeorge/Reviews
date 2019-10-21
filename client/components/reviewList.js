@@ -4,9 +4,12 @@ import Review from './review.js'
 const ReviewList = (props) => {
   return (
     <div>
-      <h3 className="number-reviews-header">
-        {props.currentProductReviews.length} Amish reviews
-      </h3>
+      {
+        props.currentProductReviews &&
+        <h3 className="number-reviews-header">
+          {props.currentProductReviews.length} Amish reviews
+        </h3>
+      }
       <div className="reviews-sorter-container">
         <span data-action="reviews:filter-action:change">
           <span className="reviews-dropdown-container">
@@ -54,6 +57,7 @@ const ReviewList = (props) => {
       </div>
       <div className="review-list-container">
         {
+          props.currentProductReviews.length > 0 &&
           props.currentProductReviews.map( currentReview => {
             return (
               <Review review={currentReview} key={currentReview.review_id} />
