@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReviewList from './components/reviewList.js'
 import axios from 'axios';
+import ReviewList from './components/reviewList.js'
 
 class Reviews extends React.Component {
   constructor(props) {
@@ -53,6 +53,20 @@ class Reviews extends React.Component {
 
   componentDidUpdate () {
 
+  }
+
+  sortReviews (reviewsArray, sortMethod) {
+    if(sortMethod === 'recent') {
+      this.setState({
+        currentProductReviews: reviewsArray.sort((review1, review2) => {
+
+        })
+      });
+    } else {
+      this.setState({
+        currentProductReviews: reviewsArray.sort()
+      });
+    }
   }
 
   render () {
