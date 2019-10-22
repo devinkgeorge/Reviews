@@ -12,7 +12,10 @@ db.once('open', () => {
 
 const mongoAtlas =
   'mongodb+srv://dkgeorge:AE2PX9NAABSEJ6JU@amishon-reviews-ajtnd.mongodb.net/Amishon?retryWrites=true&w=majority';
-mongoose.connect(mongoAtlas, { useNewUrlParser: true });
+mongoose.connect(mongoAtlas, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 const getReviews = product => {
   return new Promise((resolve, reject) => {
