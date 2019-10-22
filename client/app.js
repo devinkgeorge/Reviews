@@ -35,7 +35,7 @@ class Reviews extends React.Component {
       }
     })
     .then(reviewsForProduct => {
-      this.setState({ currentProductReviews: reviewsForProduct.data });
+      this.sortReviews(reviewsForProduct.data, 'top');
     })
     .catch( error => {
       throw error;
@@ -60,13 +60,13 @@ class Reviews extends React.Component {
     if(sortMethod === 'recent') {
       this.setState({
         currentProductReviews: reviewsArray.sort((review1, review2) => {
-          return review1.created - review2.created;
+          return review2.created - review1.created;
         })
       });
     } else {
       this.setState({
         currentProductReviews: reviewsArray.sort((review1, review2) => {
-          return review1.helpfuls - review2.helpfuls;
+          return review2.helpfuls - review1.helpfuls;
         })
       });
     }
