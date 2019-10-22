@@ -11,7 +11,10 @@ const Helpful = props => {
       <div className="helpful-button-container">
         <span className="helpful-button-outer">
           <span className="helpful-button-inner">
-            <button className="helpful-button">
+            <button
+              className="helpful-button"
+              onClick={() => props.updateHelpfuls((props.helpfuls + 1), props.reviewId)}
+            >
               <div className="helpful-button-text">
                 Helpful
               </div>

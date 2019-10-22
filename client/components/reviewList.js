@@ -60,7 +60,11 @@ const ReviewList = (props) => {
           props.currentProductReviews.length > 0 &&
           props.currentProductReviews.map( currentReview => {
             return (
-              <Review review={currentReview} key={currentReview.review_id} />
+              <Review
+                review={currentReview}
+                key={currentReview.review_id}
+                updateHelpfuls={props.updateHelpfuls}
+              />
             )
           })
         }

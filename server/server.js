@@ -29,7 +29,13 @@ app.post('/reviews', (req, res) => {
 });
 
 app.put('/reviews', (req, res) => {
-  res.send('Blank reviews PUT request working');
+  db.updateReviewHelpfuls(req.body.review_id, req.body.helpfuls)
+    .then(successMessage => {
+      res.send(successMessage);
+    })
+    .catch(err => {
+      res.send(err);
+    });
 });
 
 // Listen

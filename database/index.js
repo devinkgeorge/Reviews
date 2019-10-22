@@ -29,6 +29,18 @@ const getReviews = product => {
   });
 };
 
+const updateReviewHelpfuls = (reviewId, newHelpfuls) => {
+  return new Promise((resolve, reject) => {
+    Review.updateOne({ review_id: reviewId }, { helpfuls: newHelpfuls })
+      .then(successMessage => {
+        resolve(successMessage);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+};
+
 // Review.insertMany(reviews, err => {
 //   if (err) {
 //     console.log(err);
@@ -37,4 +49,4 @@ const getReviews = product => {
 //   }
 // });
 
-module.exports = { getReviews };
+module.exports = { getReviews, updateReviewHelpfuls };

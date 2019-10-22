@@ -22,7 +22,11 @@ const Review = props => {
         verified={props.review.verified}
       />
       <ReviewText body={props.review.body} />
-      <Helpful helpfuls={props.review.helpfuls} />
+      <Helpful
+        helpfuls={props.review.helpfuls}
+        updateHelpfuls={props.updateHelpfuls}
+        reviewId={props.review.review_id}
+      />
     </div>
   )
 }

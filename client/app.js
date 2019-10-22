@@ -7,17 +7,27 @@ class Reviews extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentProduct: 13,
-      currentProductReviews: []
+      currentProduct: 1,
+      currentProductReviews: [],
     }
-    this.updateProduct = this.updateProduct.bind(this);
+    this.updateHelpfuls = this.updateHelpfuls.bind(this);
+    this.updateReviews = this.updateReviews.bind(this);
   }
 
-  updateProduct (newProduct) {
-    this.setState({ currentProduct: newProduct })
+  updateHelpfuls (numberOfHelpfuls, reviewId) {
+    axios.put('reviews', {
+      review_id: reviewId,
+      helpfuls: numberOfHelpfuls
+    })
+    .then(() => {
+      this.updateReviews()
+    })
+    .catch( error => {
+      throw error;
+    })
   }
 
-  componentDidMount () {
+  updateReviews () {
     axios.get('/reviews', {
       params: {
         product_id: this.state.currentProduct
@@ -31,6 +41,16 @@ class Reviews extends React.Component {
     });
   }
 
+  componentDidMount () {
+    this.updateReviews();
+  }
+
+  postReview (reviewToPost) {
+    axios.post('/reviews', {
+
+    })
+  }
+
   componentDidUpdate () {
 
   }
@@ -40,7 +60,11 @@ class Reviews extends React.Component {
       <div>
         {
           this.state.currentProductReviews !== null &&
-            <ReviewList currentProductReviews={this.state.currentProductReviews} />
+            <ReviewList
+              currentProductReviews={this.state.currentProductReviews}
+              updateHelpfuls={this.updateHelpfuls}
+              updateReviews={this.updateReviews}
+            />
         }
       </div>
     )
