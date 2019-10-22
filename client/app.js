@@ -12,6 +12,7 @@ class Reviews extends React.Component {
     }
     this.updateHelpfuls = this.updateHelpfuls.bind(this);
     this.updateReviews = this.updateReviews.bind(this);
+    this.sortReviews = this.sortReviews.bind(this);
   }
 
   updateHelpfuls (numberOfHelpfuls, reviewId) {
@@ -59,12 +60,14 @@ class Reviews extends React.Component {
     if(sortMethod === 'recent') {
       this.setState({
         currentProductReviews: reviewsArray.sort((review1, review2) => {
-
+          return review1.created - review2.created;
         })
       });
     } else {
       this.setState({
-        currentProductReviews: reviewsArray.sort()
+        currentProductReviews: reviewsArray.sort((review1, review2) => {
+          return review1.helpfuls - review2.helpfuls;
+        })
       });
     }
   }
@@ -78,6 +81,7 @@ class Reviews extends React.Component {
               currentProductReviews={this.state.currentProductReviews}
               updateHelpfuls={this.updateHelpfuls}
               updateReviews={this.updateReviews}
+              sortReviews={this.sortReviews}
             />
         }
       </div>
