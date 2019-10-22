@@ -4,9 +4,12 @@ import Review from './review.js'
 const ReviewList = (props) => {
   return (
     <div>
-      <h3 className="number-reviews-header">
-        {props.currentProductReviews.length} Amish reviews
-      </h3>
+      {
+        props.currentProductReviews &&
+        <h3 className="number-reviews-header">
+          {props.currentProductReviews.length} Amish reviews
+        </h3>
+      }
       <div className="reviews-sorter-container">
         <span data-action="reviews:filter-action:change">
           <span className="reviews-dropdown-container">
@@ -54,19 +57,30 @@ const ReviewList = (props) => {
       </div>
       <div className="review-list-container">
         {
+          props.currentProductReviews.length > 0 &&
           props.currentProductReviews.map( currentReview => {
             return (
-              <Review review={currentReview} key={currentReview.review_id} />
+              <Review
+                review={currentReview}
+                key={currentReview.review_id}
+                updateHelpfuls={props.updateHelpfuls}
+              />
             )
           })
         }
+        <div>
+          <div className="see-all-reviews-container">
+            <a href="URLforAllReviewsPage" className="see-all-reviews-link">
+              See all {props.currentProductReviews.length} Amish reviews
+            </a>
+          </div>
+          <div>
+            <button className="review-button">
+              Write an Amish review
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="see-all-reviews-div">
-        <a href="URLforAllReviewsPage" className="see-all-reviews">
-          See all {props.currentProductReviews.length} Amish reviews
-        </a>
-      </div>
-      <button className="write-review-button">Write an Amish review</button>
     </div>
   )
 }
