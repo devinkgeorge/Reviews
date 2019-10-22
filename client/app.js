@@ -14,17 +14,14 @@ class Reviews extends React.Component {
     this.updateReviews = this.updateReviews.bind(this);
   }
 
-  updateHelpfuls (numberOfHelpfuls, reviewId) {
-    axios.put('reviews', {
-      review_id: reviewId,
-      helpfuls: numberOfHelpfuls
-    })
-    .then(() => {
-      this.updateReviews()
-    })
-    .catch( error => {
-      throw error;
-    })
+  componentDidMount () {
+    window.addEventListener('updateProduct', (event) => {
+      this.setState({
+        currentProduct: event.detail
+      });
+    }, false);
+
+    this.updateReviews();
   }
 
   updateReviews () {
@@ -41,8 +38,17 @@ class Reviews extends React.Component {
     });
   }
 
-  componentDidMount () {
-    this.updateReviews();
+  updateHelpfuls (numberOfHelpfuls, reviewId) {
+    axios.put('/reviews', {
+      review_id: reviewId,
+      helpfuls: numberOfHelpfuls
+    })
+    .then(() => {
+      this.updateReviews()
+    })
+    .catch( error => {
+      throw error;
+    })
   }
 
   postReview (reviewToPost) {
@@ -71,5 +77,4 @@ class Reviews extends React.Component {
   }
 }
 
-// export default Reviews;
 ReactDOM.render(<Reviews />, document.getElementById('reviews'));
