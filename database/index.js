@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 const Review = require('./models/reviews');
-// const moment = require('moment');
-// const reviews = require('./data.js');
 
-// Get the default connection
 const db = mongoose.connection;
 
 //  Bind connection to error event (to get notification of connection errors)
@@ -12,10 +9,12 @@ db.once('open', () => {
   console.log('db connected!');
 });
 
-// Set up mongoose connection to Atlas
 const mongoAtlas =
   'mongodb+srv://dkgeorge:AE2PX9NAABSEJ6JU@amishon-reviews-ajtnd.mongodb.net/Amishon?retryWrites=true&w=majority';
-mongoose.connect(mongoAtlas, { useNewUrlParser: true });
+mongoose.connect(mongoAtlas, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 const getReviews = product => {
   return new Promise((resolve, reject) => {
@@ -41,12 +40,12 @@ const updateReviewHelpfuls = (reviewId, newHelpfuls) => {
   });
 };
 
-// Review.insertMany(reviews, err => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log('successfully seeded');
-//   }
-// });
+const getAllReviews = () => {
+  return new Promise((resolve, reject) => {
+    Review.find({}).then(allReviews => {
+      resolve(allReviews);
+    });
+  });
+};
 
 module.exports = { getReviews, updateReviewHelpfuls };
