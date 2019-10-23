@@ -11,24 +11,21 @@ class Reviews extends React.Component {
       currentProductReviews: [],
     }
     this.updateHelpfuls = this.updateHelpfuls.bind(this);
-    this.updateReviews = this.updateReviews.bind(this);
+    this.getProductReviews = this.getProductReviews.bind(this);
     this.sortReviews = this.sortReviews.bind(this);
   }
 
-  updateHelpfuls (numberOfHelpfuls, reviewId) {
-    axios.put('reviews', {
-      review_id: reviewId,
-      helpfuls: numberOfHelpfuls
-    })
-    .then(() => {
-      this.updateReviews()
-    })
-    .catch( error => {
-      throw error;
-    })
+  componentDidMount () {
+    window.addEventListener('updateProduct', (event) => {
+      this.setState({
+        currentProduct: event.detail
+      });
+    }, false);
+
+    this.getProductReviews();
   }
 
-  updateReviews () {
+  getProductReviews () {
     axios.get('/reviews', {
       params: {
         product_id: this.state.currentProduct
@@ -42,8 +39,17 @@ class Reviews extends React.Component {
     });
   }
 
-  componentDidMount () {
-    this.updateReviews();
+  updateHelpfuls (numberOfHelpfuls, reviewId) {
+    axios.put('/reviews', {
+      review_id: reviewId,
+      helpfuls: numberOfHelpfuls
+    })
+    .then(() => {
+      this.getProductReviews()
+    })
+    .catch( error => {
+      throw error;
+    })
   }
 
   postReview (reviewToPost) {
@@ -80,7 +86,7 @@ class Reviews extends React.Component {
             <ReviewList
               currentProductReviews={this.state.currentProductReviews}
               updateHelpfuls={this.updateHelpfuls}
-              updateReviews={this.updateReviews}
+              getProductReviews={this.getProductReviews}
               sortReviews={this.sortReviews}
             />
         }
@@ -89,5 +95,4 @@ class Reviews extends React.Component {
   }
 }
 
-// export default Reviews;
 ReactDOM.render(<Reviews />, document.getElementById('reviews'));
