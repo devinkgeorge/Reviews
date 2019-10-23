@@ -8,11 +8,11 @@ module.exports = {
   deploy: {
     production: {
       user: 'ubuntu',
-      host: 'ec2-34-222-133-50.us-west-2.compute.amazonaws.com',
+      host: 'ec2-34-213-253-99.us-west-2.compute.amazonaws.com',
       key: '~/.ssh/Amishon.pem',
       ref: 'origin/master',
       repo: 'git@github.com:Amishon/Reviews.git',
-      path: '/home/ubuntu/Reviews',
+      path: '/home/ubuntu',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
