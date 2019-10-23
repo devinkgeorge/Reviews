@@ -11,49 +11,24 @@ const ReviewList = (props) => {
         </h3>
       }
       <div className="reviews-sorter-container">
-        <span data-action="reviews:filter-action:change">
-          <span className="reviews-dropdown-container">
-            <select
-              name=""
-              autoComplete="off"
-              tabIndex="0"
-              className="reviews-dropdown"
-              aria-pressed="false"
-            >
-              <option
-                value="helpful"
-                className="reviews-sort-order-option"
-              >
-                Top Reviews
-              </option>
-              <option
-                value="recent"
-                className="reviews-sort-order-option"
-              >
-                Most recent
-              </option>
-            </select>
-            <span
-              tabIndex="-1"
-              className="reviews-dropdown-button"
-              aria-hidden="true"
-            >
-              <span className="review-button-inner">
-                <span
-                  className="review-button-text"
-                  data-action="a-dropdown-button"
-                  role="button"
-                  aria-hidden="true"
-                >
-                  <span className="review-dropdown-prompt">
-                    Top Reviews
-                  </span>
-                </span>
-                <i className="reviews-dropdown-icon"></i>
-              </span>
-            </span>
-          </span>
-        </span>
+        <select
+          className="reviews-dropdown-button"
+          onChange={() => props.sortReviews(props.currentProductReviews, event.target.value)}
+          >
+          <option
+            className="reviews-sorter-option"
+            value='top'
+          >
+            Top Reviews
+          </option>
+          <option
+            className="reviews-sorter-option"
+            value='recent'
+          >
+            Most recent
+          </option>
+        </select>
+        <i className="reviews-dropdown-icon"></i>
       </div>
       <div className="review-list-container">
         {

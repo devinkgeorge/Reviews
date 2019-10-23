@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReviewList from './components/reviewList.js'
 import axios from 'axios';
+import ReviewList from './components/reviewList.js'
 
 class Reviews extends React.Component {
   constructor(props) {
@@ -12,6 +12,7 @@ class Reviews extends React.Component {
     }
     this.updateHelpfuls = this.updateHelpfuls.bind(this);
     this.updateReviews = this.updateReviews.bind(this);
+    this.sortReviews = this.sortReviews.bind(this);
   }
 
   updateHelpfuls (numberOfHelpfuls, reviewId) {
@@ -34,7 +35,7 @@ class Reviews extends React.Component {
       }
     })
     .then(reviewsForProduct => {
-      this.setState({ currentProductReviews: reviewsForProduct.data });
+      this.sortReviews(reviewsForProduct.data, 'top');
     })
     .catch( error => {
       throw error;
@@ -55,6 +56,22 @@ class Reviews extends React.Component {
 
   }
 
+  sortReviews (reviewsArray, sortMethod) {
+    if(sortMethod === 'recent') {
+      this.setState({
+        currentProductReviews: reviewsArray.sort((review1, review2) => {
+          return review2.created - review1.created;
+        })
+      });
+    } else {
+      this.setState({
+        currentProductReviews: reviewsArray.sort((review1, review2) => {
+          return review2.helpfuls - review1.helpfuls;
+        })
+      });
+    }
+  }
+
   render () {
     return (
       <div>
@@ -64,6 +81,7 @@ class Reviews extends React.Component {
               currentProductReviews={this.state.currentProductReviews}
               updateHelpfuls={this.updateHelpfuls}
               updateReviews={this.updateReviews}
+              sortReviews={this.sortReviews}
             />
         }
       </div>
