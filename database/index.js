@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Review = require('./models/reviews');
-// const reviews = require('./data.js');
 
 const db = mongoose.connection;
 
@@ -41,12 +40,12 @@ const updateReviewHelpfuls = (reviewId, newHelpfuls) => {
   });
 };
 
-// Review.insertMany(reviews, err => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log('successfully seeded');
-//   }
-// });
+const getAllReviews = () => {
+  return new Promise((resolve, reject) => {
+    Review.find({}).then(allReviews => {
+      resolve(allReviews);
+    });
+  });
+};
 
 module.exports = { getReviews, updateReviewHelpfuls };
