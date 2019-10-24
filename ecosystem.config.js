@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'Amishon Reviews',
+      name: 'Amishon',
       script: 'server/server.js'
     }
   ],
