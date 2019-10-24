@@ -58,8 +58,10 @@ class Reviews extends React.Component {
     })
   }
 
-  componentDidUpdate () {
-
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.currentProduct !== prevState.currentProduct) {
+      this.getProductReviews();
+    }
   }
 
   sortReviews (reviewsArray, sortMethod) {
