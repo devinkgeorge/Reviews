@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Ratings from './components/ratings.js'
 import ReviewList from './components/reviewList.js'
 
 class Reviews extends React.Component {
@@ -83,15 +84,23 @@ class Reviews extends React.Component {
   render () {
     return (
       <div>
-        {
-          this.state.currentProductReviews !== null &&
-            <ReviewList
-              currentProductReviews={this.state.currentProductReviews}
-              updateHelpfuls={this.updateHelpfuls}
-              getProductReviews={this.getProductReviews}
-              sortReviews={this.sortReviews}
-            />
-        }
+        <div className="ratings-container">
+          {
+            this.state.currentProductReviews !== null &&
+              <Ratings />
+          }
+        </div>
+        <div className="review-list-container">
+          {
+            this.state.currentProductReviews !== null &&
+              <ReviewList
+                currentProductReviews={this.state.currentProductReviews}
+                updateHelpfuls={this.updateHelpfuls}
+                getProductReviews={this.getProductReviews}
+                sortReviews={this.sortReviews}
+              />
+          }
+        </div>
       </div>
     )
   }
