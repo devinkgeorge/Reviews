@@ -261,6 +261,10 @@ body {
   background-position: -37px -368px;
 }
 
+.review-star-3-5 {
+  background-position: -191px -368px;
+}
+
 .review-star-2 {
   background-position: -53px -368px;
 }
@@ -417,4 +421,18 @@ body {
   padding: 0 10px 0 11px;
   text-align: center;
   white-space: nowrap;
+}
+
+.review-block-container {
+  width: 70%;
+}
+
+.ratings-block-container {
+  width: 30%;
+}
+
+.review-rating-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 26px!important
 }
