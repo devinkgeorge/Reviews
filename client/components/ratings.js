@@ -6,7 +6,7 @@ const Ratings = (props) => {
       <div>
         <div>
           <div>
-            <div class="a-row">
+            <div className="a-row">
               <h2>Customer reviews</h2>
             </div>
             <div>
@@ -44,124 +44,122 @@ const Ratings = (props) => {
                   <div>
                     <span>
                       <table>
-                        <table>
-                          <tr>
-                            <td>
-                              <span>
-                                <a>
-                                  5 star
-                                </a>
-                              </span>
-                             <span></span>
-                            </td>
-                            <td>
+                        <tr>
+                          <td>
+                            <span>
                               <a>
-                                <div>
-                                  <div>
-                                  </div>
-                                </div>
+                                5 star
                               </a>
-                            </td>
-                            <td>
-                              <span></span>
-                              <span>
-                                <a>37%</a>
-                              </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span>
-                                <a>4 star</a>
-                              </span>
-                              <span></span>
-                            </td>
-                            <td>
-                              <a>
+                            </span>
+                            <span></span>
+                          </td>
+                          <td>
+                            <a>
+                              <div>
                                 <div>
-                                  <div>
-                                  </div>
                                 </div>
-                              </a>
-                            </td>
-                            <td>
-                              <span></span>
-                              <span>
-                                <a>24%</a>
-                              </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span>
-                                <a>3 star</a>
-                              </span>
-                              <span></span>
-                            </td>
-                            <td>
-                              <a>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <span></span>
+                            <span>
+                              <a>37%</a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>
+                              <a>4 star</a>
+                            </span>
+                            <span></span>
+                          </td>
+                          <td>
+                            <a>
+                              <div>
                                 <div>
-                                  <div></div>
                                 </div>
-                              </a>
-                            </td>
-                            <td>
-                              <span></span>
-                              <span>
-                                <a>15%</a>
-                              </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span>
-                                <a>2 star</a>
-                              </span>
-                              <span></span>
-                            </td>
-                            <td>
-                              <a>
-                                <div>
-                                  <div></div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>
-                              <span></span>
-                              <span>
-                                <a>6%</a>
-                              </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span>
-                                <a>1 star</a>
-                              </span>
-                              <span></span>
-                            </td>
-                            <td>
-                              <a>
-                                <div>
-                                  <div></div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>
-                              <span></span>
-                              <span>
-                                <a>19%</a>
-                              </span>
-                            </td>
-                          </tr>
-                        </table>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <span></span>
+                            <span>
+                              <a>24%</a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>
+                              <a>3 star</a>
+                            </span>
+                            <span></span>
+                          </td>
+                          <td>
+                            <a>
+                              <div>
+                                <div></div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <span></span>
+                            <span>
+                              <a>15%</a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>
+                              <a>2 star</a>
+                            </span>
+                            <span></span>
+                          </td>
+                          <td>
+                            <a>
+                              <div>
+                                <div></div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <span></span>
+                            <span>
+                              <a>6%</a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>
+                              <a>1 star</a>
+                            </span>
+                            <span></span>
+                          </td>
+                          <td>
+                            <a>
+                              <div>
+                                <div></div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <span></span>
+                            <span>
+                              <a>19%</a>
+                            </span>
+                          </td>
+                        </tr>
                       </table>
                     </span>
                   </div>
                 </div>
               </div>
             </span>
-            <hr>
+            <hr></hr>
               <span></span>
               <h3>Review this product</h3>
               <div>Share your thoughts with other customers</div>
@@ -172,7 +170,6 @@ const Ratings = (props) => {
                   </span>
                 </span>
               </div>
-            </hr>
           </div>
         </div>
       </div>
