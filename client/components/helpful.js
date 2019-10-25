@@ -5,7 +5,7 @@ const Helpful = props => {
     <div>
       { props.helpfuls > 0 &&
         <div className="helpful-number">
-          {props.helpfuls} Amish found this helpful
+          {props.helpfuls} farmers found this helpful
         </div>
       }
       <div className="helpful-button-container">

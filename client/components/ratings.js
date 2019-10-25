@@ -14,21 +14,10 @@ const Ratings = (props) => {
                 <div>
                   <div>
                     <i className="review-star-3-5 review-stars">
+                    </i>
                       <span>
                         3.5 out of 5 stars
                       </span>
-                    </i>
-                  </div>
-                  <div>
-                    <div>
-                      <span>
-                        <span>
-                          <span>
-                            3.5 out of 5
-                          </span>
-                        </span>
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>
