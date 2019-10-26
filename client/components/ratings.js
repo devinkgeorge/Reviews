@@ -35,6 +35,8 @@ const Ratings = (props) => {
                   <div>
                     <span>
                       <table>
+                        <tbody>
+
                         <tr>
                           <td>
                             <span>
@@ -144,6 +146,7 @@ const Ratings = (props) => {
                             </span>
                           </td>
                         </tr>
+                        </tbody>
                       </table>
                     </span>
                   </div>
