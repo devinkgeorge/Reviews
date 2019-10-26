@@ -30,7 +30,7 @@ const ReviewList = (props) => {
             Most recent
           </option>
         </select>
-        <i className="reviews-dropdown-icon"></i>
+        {/* <i className="reviews-dropdown-icon"></i> */}
       </div>
       <div className="review-list-container">
         {
