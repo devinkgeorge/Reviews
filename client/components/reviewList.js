@@ -13,8 +13,10 @@ const ReviewList = (props) => {
       <div className="reviews-sorter-container">
         <select
           className="reviews-dropdown-button"
-          onChange={() => props.sortReviews(props.currentProductReviews, event.target.value)}
-          >
+          onChange={
+            () => props.updateSorter(event.target.value)
+          }
+        >
           <option
             className="reviews-sorter-option"
             value='top'

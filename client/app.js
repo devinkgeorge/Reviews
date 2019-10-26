@@ -9,11 +9,13 @@ class Reviews extends React.Component {
     super(props);
     this.state = {
       currentProduct: 1,
+      sortMethod: 'top',
       currentProductReviews: [],
     }
     this.updateHelpfuls = this.updateHelpfuls.bind(this);
     this.getProductReviews = this.getProductReviews.bind(this);
     this.sortReviews = this.sortReviews.bind(this);
+    this.updateSorter = this.updateSorter.bind(this);
   }
 
   componentDidMount () {
@@ -33,7 +35,7 @@ class Reviews extends React.Component {
       }
     })
     .then(reviewsForProduct => {
-      this.sortReviews(reviewsForProduct.data, 'top');
+      this.sortReviews(reviewsForProduct.data);
     })
     .catch( error => {
       throw error;
@@ -63,10 +65,13 @@ class Reviews extends React.Component {
     if (this.state.currentProduct !== prevState.currentProduct) {
       this.getProductReviews();
     }
+    if (this.state.sortMethod !== prevState.sortMethod) {
+      this.sortReviews(this.state.currentProductReviews);
+    }
   }
 
-  sortReviews (reviewsArray, sortMethod) {
-    if(sortMethod === 'recent') {
+  sortReviews (reviewsArray) {
+    if(this.state.sortMethod === 'recent') {
       this.setState({
         currentProductReviews: reviewsArray.sort((review1, review2) => {
           return review2.created - review1.created;
@@ -79,6 +84,10 @@ class Reviews extends React.Component {
         })
       });
     }
+  }
+
+  updateSorter (newSortMethod) {
+    this.setState({ sortMethod: newSortMethod });
   }
 
   render () {
@@ -97,7 +106,7 @@ class Reviews extends React.Component {
                 currentProductReviews={this.state.currentProductReviews}
                 updateHelpfuls={this.updateHelpfuls}
                 getProductReviews={this.getProductReviews}
-                sortReviews={this.sortReviews}
+                updateSorter={this.updateSorter}
               />
           }
         </div>
