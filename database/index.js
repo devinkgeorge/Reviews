@@ -40,6 +40,25 @@ const updateReviewHelpfuls = (reviewId, newHelpfuls) => {
   });
 };
 
+const postReview = reviewObject => {
+  return new Promise((resolve, reject) => {
+    Review.insertMany([reviewObject], (error, successMessage) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(successMessage);
+    });
+    // .then(successMessage => {
+    //   console.log('this is success ', successMessage)
+    //   resolve(successMessage);
+    // })
+    // .catch(error => {
+    //   console.log('this is catch')
+    //   reject(error);
+    // });
+  });
+};
+
 const getAllReviews = () => {
   return new Promise((resolve, reject) => {
     Review.find({}).then(allReviews => {
@@ -48,4 +67,8 @@ const getAllReviews = () => {
   });
 };
 
-module.exports = { getReviews, updateReviewHelpfuls };
+module.exports = {
+  getReviews,
+  updateReviewHelpfuls,
+  postReview
+};
