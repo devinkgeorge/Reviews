@@ -2,12 +2,14 @@ import React from 'react';
 
 const Ratings = (props) => {
   return (
-    <div className="ratings-block-container">
-      <div>
+    <div>
+      {/* <div>
         <div>
-          <div>
-            <div className="a-row">
-              <h2>Customer reviews</h2>
+          <div> */}
+            <div className="ratings-title-container">
+              <h2 className="ratings-title-1">
+                Customer reviews
+              </h2>
             </div>
             <div>
               <div>
@@ -148,20 +150,24 @@ const Ratings = (props) => {
                 </div>
               </div>
             </span>
-            <hr></hr>
-              <span></span>
-              <h3>Review this product</h3>
-              <div>Share your thoughts with other customers</div>
-              <div>
+            <div className="ratings-hr">
+              <hr></hr>
+            </div>
+            <span></span>
+            <h3 className="ratings-title-2">
+              Review this product
+            </h3>
+            <div>Share your thoughts with other customers</div>
+            <div>
+              <span>
                 <span>
-                  <span>
-                    <a>Write a customer review</a>
-                  </span>
+                  <a>Write a customer review</a>
                 </span>
-              </div>
-          </div>
+              </span>
+            </div>
+          {/* </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
