@@ -44,7 +44,9 @@ const Ratings = (props) => {
                                 5 star
                               </a>
                             </span>
-                            <span></span>
+                            <span className="ratings-letter-space"
+                            >
+                            </span>
                           </td>
                           <td>
                             <a>
@@ -55,7 +57,9 @@ const Ratings = (props) => {
                             </a>
                           </td>
                           <td>
-                            <span></span>
+                            <span className="ratings-letter-space"
+                            >
+                            </span>
                             <span>
                               <a>37%</a>
                             </span>

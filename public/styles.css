@@ -434,7 +434,8 @@ body {
 .review-rating-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 26px!important
+  margin-bottom: 26px!important;
+  padding-left: 8px
 }
 
 .ratings-title-container {
@@ -464,4 +465,9 @@ body {
 .ratings-hr {
   align-items: flex-start;
   width: 70%
+}
+
+.ratings-letter-space {
+  display: inline-block;
+  width: .385em;
 }
