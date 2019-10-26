@@ -7,7 +7,7 @@ const ReviewList = (props) => {
       {
         props.currentProductReviews &&
         <h3 className="number-reviews-header">
-          {props.currentProductReviews.length} Amish reviews
+          {props.currentProductReviews.length} farmer reviews
         </h3>
       }
       <div className="reviews-sorter-container">
@@ -46,12 +46,12 @@ const ReviewList = (props) => {
         <div>
           <div className="see-all-reviews-container">
             <a href="URLforAllReviewsPage" className="see-all-reviews-link">
-              See all {props.currentProductReviews.length} Amish reviews
+              See all {props.currentProductReviews.length} farmer reviews
             </a>
           </div>
           <div>
             <button className="review-button">
-              Write an Amish review
+              Write a farmer review
             </button>
           </div>
         </div>

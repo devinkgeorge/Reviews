@@ -83,14 +83,14 @@ class Reviews extends React.Component {
 
   render () {
     return (
-      <div>
-        <div className="ratings-container">
+      <div className="review-rating-container">
+        <div className="ratings-block-container">
           {
             this.state.currentProductReviews !== null &&
               <Ratings />
           }
         </div>
-        <div className="review-list-container">
+        <div className="review-block-container">
           {
             this.state.currentProductReviews !== null &&
               <ReviewList
