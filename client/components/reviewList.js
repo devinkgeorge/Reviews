@@ -7,7 +7,7 @@ class ReviewList extends React.Component {
     super(props);
     this.state = {
       addReview: false,
-      review_id: 906,
+      review_id: 913,
       product_id: this.props.currentProduct,
       created: 0,
       title: '',
@@ -32,8 +32,7 @@ class ReviewList extends React.Component {
 
   postReview (event) {
     event.preventDefault();
-    // http://ec2-34-213-253-99.us-west-2.compute.amazonaws.com
-    axios.post('/reviews',  {
+    axios.post('http://ec2-34-213-253-99.us-west-2.compute.amazonaws.com/reviews',  {
         reviewToPost: {
           review_id: this.state.review_id,
           product_id: this.state.product_id,
