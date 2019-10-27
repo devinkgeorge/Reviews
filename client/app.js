@@ -55,21 +55,6 @@ class Reviews extends React.Component {
     })
   }
 
-  postReview (reviewToPost) {
-    axios.post('http://ec2-34-213-253-99.us-west-2.compute.amazonaws.com/reviews', {
-
-    })
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.currentProduct !== prevState.currentProduct) {
-      this.getProductReviews();
-    }
-    if (this.state.sortMethod !== prevState.sortMethod) {
-      this.sortReviews(this.state.currentProductReviews);
-    }
-  }
-
   sortReviews (reviewsArray) {
     if(this.state.sortMethod === 'recent') {
       this.setState({
@@ -90,6 +75,15 @@ class Reviews extends React.Component {
     this.setState({ sortMethod: newSortMethod });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.currentProduct !== prevState.currentProduct) {
+      this.getProductReviews();
+    }
+    if (this.state.sortMethod !== prevState.sortMethod) {
+      this.sortReviews(this.state.currentProductReviews);
+    }
+  }
+
   render () {
     return (
       <div className="review-rating-container">
@@ -107,6 +101,8 @@ class Reviews extends React.Component {
                 updateHelpfuls={this.updateHelpfuls}
                 getProductReviews={this.getProductReviews}
                 updateSorter={this.updateSorter}
+                currentProduct={this.state.currentProduct}
+                getProductReviews={this.getProductReviews}
               />
           }
         </div>
