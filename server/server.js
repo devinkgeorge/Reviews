@@ -26,7 +26,13 @@ app.get('/reviews', (req, res) => {
 });
 
 app.post('/reviews', (req, res) => {
-  res.send('Blank reviews POST request working');
+  db.postReview(req.body.reviewToPost)
+    .then(successMessage => {
+      res.send(successMessage);
+    })
+    .catch(err => {
+      res.send(err);
+    });
 });
 
 app.put('/reviews', (req, res) => {
