@@ -473,6 +473,30 @@ body {
 }
 
 .post-review-form {
-
+  padding-top: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  box-shadow: inset 0 -1px 2px 0 rgba(187,187,187,.5);
+  width: 60%
 }
 
+.post-review-button {
+  margin-bottom: 14px!important;
+}
+
+
+.post-review-form-section {
+  margin-bottom: 14px!important;
+}
+
+.post-review-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
+  padding: 5px;
+}
+
+.post-review-text {
+  width: 90%
+}
